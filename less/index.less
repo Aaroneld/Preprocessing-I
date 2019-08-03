@@ -4,6 +4,9 @@
    License: none (public domain)
 */
 
+@import (inline) "google-fonts.css";
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,3 +60,478 @@ html, body {
     height: 100%;
 }
 
+/** my CSS **/
+
+@font-color-main: white;
+@font-color-secondary: orangered;
+
+body {
+
+	margin: 0 4.5%;
+	background-image: url("images/rhombus.jpg");
+	
+
+	h3{
+
+		font-size: 150%;
+	}
+
+	h1 {
+
+		font-size: 250%;
+		text-align: center;
+
+		@media screen and (max-width: 500px){
+
+			flex-flow: column;
+			font-size: 175%;
+			margin-top: 5%;
+			
+		}
+	}
+
+	h3{
+
+		color: @font-color-main;
+		text-decoration: underline;
+		font-family: 'Archivo Narrow', sans-serif;
+	}
+
+	p {
+
+		line-height: 200%;
+		color: @font-color-main;
+		font-family: 'Archivo Narrow', sans-serif;
+	}
+
+	
+	.header {
+
+		display: flex;
+
+		
+		
+
+		nav{
+			
+			
+			display: flex;
+			height: 100%;
+			width: 100%;
+			justify-content: space-around;
+			align-items: center;
+			background-color: orangered;
+			opacity: .8;
+
+
+			
+			@media screen and (max-width: 500px){
+
+				flex-flow: column;
+
+				a {
+
+					padding: 10% 0;
+					width: 100%;
+					border: 1px solid black;
+				}
+			}	
+		}
+			
+
+			a{
+
+				text-align: center;
+				text-decoration: none;
+				color: black;
+				width: 25%;
+				font-family: 'Archivo Narrow', sans-serif;
+				height: 100%;
+				padding: .9% 0;
+					
+				&:hover {
+
+					background-color: black;
+					opacity: .7;
+					color: @font-color-secondary;
+					
+					
+				}
+				
+				
+			}
+		}
+	
+
+		#image-summary {
+
+			display: flex;
+			
+			padding: 2% 2% 4% 0;
+			background-image: url("images/hexagon.jpg");
+			background-repeat: no-repeat; /* Do not repeat the image */
+			background-size: cover;
+			border-radius: 0 0 10px 10px;
+
+			@media screen and (max-width: 500px){
+
+				flex-flow: column;
+				
+			}
+
+			#intro-div {
+
+				margin-left: 5%;
+				margin-top: 3%;
+				background-image: url("images/hexagon.jpg");
+				background-size: cover;
+				opacity: .9;
+
+				@media screen and (max-width: 500px){
+
+					flex-flow: column;
+					margin-left: 2.3%;
+					
+				}
+
+				&:hover {
+
+					transform: scale(1.065);
+					transition: 2s;
+
+						
+					@media screen and (max-width: 500px){
+
+						flex-flow: column;
+						margin-left: 2.3%;
+						transform: scale(1.04);
+					
+					}
+				}
+				
+
+				* {
+					color: @font-color-main;
+					
+				}
+
+				h1{
+
+				font-family: 'Lobster', cursive ;
+				padding-top: 3%;
+				
+				}
+
+				h3 {
+
+					margin-top: 7%;
+					text-align: center;
+					font-family: 'Lobster', cursive ;
+				}
+
+				p {
+
+					
+					margin: 5% 5% 1% 5%;
+					font-family: 'Archivo Narrow', sans-serif;
+					padding: 1%;
+					font-size: 115%;
+					
+				}
+
+				
+				
+			
+			}
+
+
+			#image-container {
+
+				position: relative;
+				margin-left: 1.5%;
+				
+
+				&:hover {	
+
+					transform: scale(1.05);
+					transition: 2s;
+				} 
+
+				@media screen and (max-width: 500px){
+
+					margin: 5%;;
+
+				}
+				
+				img { 
+
+					width: 100%;
+					height: 100%;
+					margin-left: 2%;
+					object-fit: contain;
+					opacity: .9;
+					border-radius: 10px;
+
+					@media screen and (max-width: 500px){
+
+						margin-left: 1%;
+	
+					}
+					
+					
+				}
+
+				#contact-div{
+					
+					position: absolute;
+					bottom: .085%;
+					
+					left: 2%;
+					background-color: black;
+					opacity: .7;
+					width: 100%;
+					border-radius: 0 0 10px 10px;
+					
+					p{
+						text-align: center;
+						color: @font-color-secondary;
+					}
+
+					@media screen and (max-width: 500px){
+
+						left: 1%;
+	
+					}
+				}
+			}
+		}
+	
+
+	#row {
+
+		display:flex;
+		margin: 5% 0;
+		
+		background-image: url("images/hexagon.jpg");
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover;
+		padding: 2%;
+
+
+		* {
+
+			width:50%;
+		}
+
+		#key-skills{
+
+				
+			&:hover {
+
+				@media screen and (max-width: 500px){
+
+					transform: none;
+					transition: none;
+
+				}
+
+				transform:translate(50%) scale(1.065) ;
+				transition: 2s;
+			}
+
+			* {
+
+				width: 100%;
+			}
+
+			ul {
+
+				margin-top: 5%;
+			}
+			
+			li {
+				
+				color: white;
+				font-family: 'Archivo Narrow', sans-serif;
+				line-height: 225%;	
+				list-style: circle;
+				list-style-position: inside;
+			}
+		}
+
+		#references {
+
+				
+			&:hover {
+
+				@media screen and (max-width: 500px){
+
+					transform: none ;
+					transition: none;
+
+				}
+
+				transform: scale(1.065) ;
+				transition: 2s;
+			}
+
+
+			h3{
+
+				margin-bottom: 4%;
+				margin-left: 5%;
+			}
+			
+			div {
+
+				width: 100%;
+				margin-left: 5%;
+
+				p {
+					
+					width: 100%;
+				}
+			}
+		}
+
+		
+	}
+
+	#relevant-experience{
+
+	
+		padding: 1% 0 0 0;
+		border-radius: 10px;
+
+	
+		
+	
+
+		h3 {
+			text-align: center;	
+			color: black;
+			background-color: white;
+			padding-bottom: 1%;
+			padding-top: 1%;
+			opacity: .9;
+			border-top: .5px solid black;
+			border-right: .5px solid black;
+			border-left: .5px solid black;
+			
+		}
+
+		div {
+			
+			border-right: .5px solid black;
+			border-left: .5px solid black;
+			background-color: white;
+			display: flex;
+			opacity: .9;
+
+			*{
+
+				color: black;
+				font-weight: bold;
+				width: 50%;
+
+				@media screen and (max-width: 500px){
+
+					font-size: 65%;
+	
+				}
+
+				
+			}
+
+			p:nth-child(1){
+
+				padding-left: 1%;
+			}
+
+			p:nth-child(2) {
+
+				text-align: right;
+				padding-right: 1%;
+			}
+
+		}
+
+		section {
+
+			padding: 1%;
+			background-image: url("images/hexagon.jpg");
+			background-repeat: no-repeat; /* Do not repeat the image */
+			background-attachment: fixed;
+			background-size: cover;
+
+			
+			&:hover {
+
+				transform: scale(1.065);
+				transition: 2s;
+			}
+
+			p{
+
+				margin: 1% 1% 1% 1%;
+				line-height: 100%;
+
+				@media screen and (max-width: 500px){
+
+					font-size: 75%;
+	
+				}
+				
+			}
+		}
+	}
+
+	footer {
+
+		.header();
+
+		nav{
+			
+			
+			display: flex;
+			height: 100%;
+			width: 100%;
+			justify-content: space-around;
+			align-items: center;
+			background-color: orangered;
+			opacity: .8;
+
+			@media screen and (max-width: 500px){
+
+				flex-flow: column;
+
+			}
+
+			a{
+
+				text-align: center;
+				text-decoration: none;
+				color: black;
+				width: 25%;
+				font-family: 'Archivo Narrow', sans-serif;
+
+				@media screen and (max-width: 500px){
+
+					padding: 10% 0;
+					width: 100%;
+					border: 1px solid black;
+				}
+			
+					
+				&:hover {
+
+					background-color: black;
+					opacity: .7;
+					color: @font-color-secondary;
+					
+				}
+			}
+		}	
+	}
+	
+}
