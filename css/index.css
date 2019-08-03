@@ -1,1 +1,488 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/** my CSS **/
+body {
+  margin: 0 4.5%;
+  background-image: url("images/rhombus.jpg");
+}
+body h3 {
+  font-size: 150%;
+}
+body h1 {
+  font-size: 250%;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  body h1 {
+    flex-flow: column;
+    font-size: 175%;
+    margin-top: 5%;
+  }
+}
+body h3 {
+  color: white;
+  text-decoration: underline;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+body p {
+  line-height: 200%;
+  color: white;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+body .header {
+  display: flex;
+}
+body .header nav {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: orangered;
+  opacity: 0.8;
+}
+@media screen and (max-width: 500px) {
+  body .header nav {
+    flex-flow: column;
+  }
+  body .header nav a {
+    padding: 10% 0;
+    width: 100%;
+    border: 1px solid black;
+  }
+}
+body .header a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  width: 25%;
+  font-family: 'Archivo Narrow', sans-serif;
+  height: 100%;
+  padding: 0.9% 0;
+}
+body .header a:hover {
+  background-color: black;
+  opacity: 0.7;
+  color: orangered;
+}
+body #image-summary {
+  display: flex;
+  padding: 2% 2% 4% 0;
+  background-image: url("images/hexagon.jpg");
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  border-radius: 0 0 10px 10px;
+}
+@media screen and (max-width: 500px) {
+  body #image-summary {
+    flex-flow: column;
+  }
+}
+body #image-summary #intro-div {
+  margin-left: 5%;
+  margin-top: 3%;
+  background-image: url("images/hexagon.jpg");
+  background-size: cover;
+  opacity: 0.9;
+}
+@media screen and (max-width: 500px) {
+  body #image-summary #intro-div {
+    flex-flow: column;
+    margin-left: 2.3%;
+  }
+}
+body #image-summary #intro-div:hover {
+  transform: scale(1.065);
+  transition: 2s;
+}
+@media screen and (max-width: 500px) {
+  body #image-summary #intro-div:hover {
+    flex-flow: column;
+    margin-left: 2.3%;
+    transform: scale(1.04);
+  }
+}
+body #image-summary #intro-div * {
+  color: white;
+}
+body #image-summary #intro-div h1 {
+  font-family: 'Lobster', cursive;
+  padding-top: 3%;
+}
+body #image-summary #intro-div h3 {
+  margin-top: 7%;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+}
+body #image-summary #intro-div p {
+  margin: 5% 5% 1% 5%;
+  font-family: 'Archivo Narrow', sans-serif;
+  padding: 1%;
+  font-size: 115%;
+}
+body #image-summary #image-container {
+  position: relative;
+  margin-left: 1.5%;
+}
+body #image-summary #image-container:hover {
+  transform: scale(1.05);
+  transition: 2s;
+}
+@media screen and (max-width: 500px) {
+  body #image-summary #image-container {
+    margin: 5%;
+  }
+}
+body #image-summary #image-container img {
+  width: 100%;
+  height: 100%;
+  margin-left: 2%;
+  object-fit: contain;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+@media screen and (max-width: 500px) {
+  body #image-summary #image-container img {
+    margin-left: 1%;
+  }
+}
+body #image-summary #image-container #contact-div {
+  position: absolute;
+  bottom: 0.085%;
+  left: 2%;
+  background-color: black;
+  opacity: 0.7;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+body #image-summary #image-container #contact-div p {
+  text-align: center;
+  color: orangered;
+}
+@media screen and (max-width: 500px) {
+  body #image-summary #image-container #contact-div {
+    left: 1%;
+  }
+}
+body #row {
+  display: flex;
+  margin: 5% 0;
+  background-image: url("images/hexagon.jpg");
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  padding: 2%;
+}
+body #row * {
+  width: 50%;
+}
+body #row #key-skills:hover {
+  transform: translate(50%) scale(1.065);
+  transition: 2s;
+}
+@media screen and (max-width: 500px) {
+  body #row #key-skills:hover {
+    transform: none;
+    transition: none;
+  }
+}
+body #row #key-skills * {
+  width: 100%;
+}
+body #row #key-skills ul {
+  margin-top: 5%;
+}
+body #row #key-skills li {
+  color: white;
+  font-family: 'Archivo Narrow', sans-serif;
+  line-height: 225%;
+  list-style: circle;
+  list-style-position: inside;
+}
+body #row #references:hover {
+  transform: scale(1.065);
+  transition: 2s;
+}
+@media screen and (max-width: 500px) {
+  body #row #references:hover {
+    transform: none ;
+    transition: none;
+  }
+}
+body #row #references h3 {
+  margin-bottom: 4%;
+  margin-left: 5%;
+}
+body #row #references div {
+  width: 100%;
+  margin-left: 5%;
+}
+body #row #references div p {
+  width: 100%;
+}
+body #relevant-experience {
+  padding: 1% 0 0 0;
+  border-radius: 10px;
+}
+body #relevant-experience h3 {
+  text-align: center;
+  color: black;
+  background-color: white;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  opacity: 0.9;
+  border-top: 0.5px solid black;
+  border-right: 0.5px solid black;
+  border-left: 0.5px solid black;
+}
+body #relevant-experience div {
+  border-right: 0.5px solid black;
+  border-left: 0.5px solid black;
+  background-color: white;
+  display: flex;
+  opacity: 0.9;
+}
+body #relevant-experience div * {
+  color: black;
+  font-weight: bold;
+  width: 50%;
+}
+@media screen and (max-width: 500px) {
+  body #relevant-experience div * {
+    font-size: 65%;
+  }
+}
+body #relevant-experience div p:nth-child(1) {
+  padding-left: 1%;
+}
+body #relevant-experience div p:nth-child(2) {
+  text-align: right;
+  padding-right: 1%;
+}
+body #relevant-experience section {
+  padding: 1%;
+  background-image: url("images/hexagon.jpg");
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-attachment: fixed;
+  background-size: cover;
+}
+body #relevant-experience section:hover {
+  transform: scale(1.065);
+  transition: 2s;
+}
+body #relevant-experience section p {
+  margin: 1% 1% 1% 1%;
+  line-height: 100%;
+}
+@media screen and (max-width: 500px) {
+  body #relevant-experience section p {
+    font-size: 75%;
+  }
+}
+body footer {
+  display: flex;
+}
+body footer nav {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: orangered;
+  opacity: 0.8;
+}
+@media screen and (max-width: 500px) {
+  body footer nav {
+    flex-flow: column;
+  }
+  body footer nav a {
+    padding: 10% 0;
+    width: 100%;
+    border: 1px solid black;
+  }
+}
+body footer a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  width: 25%;
+  font-family: 'Archivo Narrow', sans-serif;
+  height: 100%;
+  padding: 0.9% 0;
+}
+body footer a:hover {
+  background-color: black;
+  opacity: 0.7;
+  color: orangered;
+}
+body footer nav {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: orangered;
+  opacity: 0.8;
+}
+@media screen and (max-width: 500px) {
+  body footer nav {
+    flex-flow: column;
+  }
+}
+body footer nav a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  width: 25%;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+@media screen and (max-width: 500px) {
+  body footer nav a {
+    padding: 10% 0;
+    width: 100%;
+    border: 1px solid black;
+  }
+}
+body footer nav a:hover {
+  background-color: black;
+  opacity: 0.7;
+  color: orangered;
+}
